@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from flask_bootstrap import Bootstrap
 from flask import url_for
 
 app=Flask(__name__)

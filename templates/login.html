@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
+
 <body>
     <div class="login-form">
         <h1>Login</h1>
@@ -12,7 +14,8 @@
             <input type="text" name="user" placeholder="User Name">
             <p>Password</p>
             <input type="password" name="password" placeholder="Password">
-            <button type="submit">Login</button>
-        
+            <button type="submit"><a href="{{url_for('dash')}}">Login</a></button>
         </form>
+</body>
+
 </html>

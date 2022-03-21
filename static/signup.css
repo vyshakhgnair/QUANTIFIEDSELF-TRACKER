@@ -9,7 +9,7 @@ body {
     background-size: cover;
 }
 
-.login-form {
+.signup-form {
     width: 350px;
     top: 50%;
     left: 50%;
@@ -18,19 +18,19 @@ body {
     color: #fff;
 }
 
-.login-form h1 {
+.signup-form h1 {
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     margin: 40px 0;
 }
 
-.login-form p {
+.signup-form p {
     font-size: 20px;
     margin: 20px 0;
 }
 
-.login-form input {
+.signup-form input {
     font-size: 16px;
     width: 100%;
     margin: 0px 0;
@@ -40,23 +40,12 @@ body {
     border-radius: 5px;
 }
 
-.login-form .btn-group .btn1 {
+.signup-form button {
     font-size: 18px;
     font-weight: bold;
     margin: 50px 0;
     padding: 10px 15px;
     width: 50%;
-    border-radius: 5px;
-    border: 0;
-}
-
-.login-form .btn-group .btn2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 50px 10px;
-    padding: 10px 15px;
-    width: 5 0%;
-    position: absolute;
     border-radius: 5px;
     border: 0;
 }

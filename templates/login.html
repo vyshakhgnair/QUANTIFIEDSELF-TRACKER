@@ -14,8 +14,12 @@
             <input type="text" name="user" placeholder="User Name">
             <p>Password</p>
             <input type="password" name="password" placeholder="Password">
-            <button type="submit"><a href="{{url_for('dash')}}">Login</a></button>
+            <div class="btn-group">
+                <button class="btn1" type="submit"><a href="{{url_for('dash')}}">Login</a></button>
+                <button class="btn2" type="submit"><a href="{{url_for('signup')}}">Signup</a></button>
+            </div>
         </form>
+    </div>
 </body>
 
 </html>

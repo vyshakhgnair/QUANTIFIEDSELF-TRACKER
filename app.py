@@ -9,6 +9,10 @@ app=Flask(__name__)
 def index():
     return render_template('login.html')
 
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')    
+
 @app.route('/dashboard')
 def dash():
     return render_template('dashboard.html')

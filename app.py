@@ -94,7 +94,25 @@ def addtracker():
         db.session.add(data)
         db.session.commit()
         return redirect(url_for('dash'))
-    return render_template('add_tracker.html')      
+    return render_template('add_tracker.html')   
+
+@app.route('/addlog/<int:tracker_id>',methods=['GET', 'POST'])
+def addtracklog(tracker_id):
+    if request.form:
+        Timestamp=request.form['timer']
+        value=request.form['values']
+        Note=request.form['note']
+        user_obj = User.query.filter_by(user_name=usernam).first()
+        if user_obj is not None:
+            user_idd=user_obj.user_id
+        data=log(timestamp=Timestamp,value=value,notes=Note,user_id=user_idd,tracker_id=tracker_id)
+        db.session.add(data)
+        db.session.commit()
+        return redirect(url_for('dash'))
+    return render_template('trackinfo.html',tracker=tracker_id)
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

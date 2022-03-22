@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Log</title>
+    <link rel="stylesheet" type="text/css" href="static/log.css">
+</head>
+
+<body>
+    <div class="log-form">
+        <h1>Add Track Log</h1>
+        <form action="/addlog/{{tracker}}" method="post" id="log_form" required>
+            <p>TimeStamp</p><input type="dark" name="timer" placeholder="DD/MM/YYYY" required>
+            <p>Values</p><input type="text" name="values" placeholder="Values" required>
+            <p>Note </p><input type="text" name="note" placeholder="Notes"><button type="submit">Done</button></form>
+</body>
+
+</html>

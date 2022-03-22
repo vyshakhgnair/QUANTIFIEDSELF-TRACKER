@@ -23,7 +23,7 @@ h1 {
     margin: 50px 0;
     padding-top: 200px;
     padding-right: 250px;
-    padding-left: 290px;
+    padding-left: 100px;
     color: black;
     overflow: hidden;
 }
@@ -32,22 +32,8 @@ h1 {
     font-size: 25px;
     position: relative;
     padding-top: 50px;
-    padding-left: 290px;
+    padding-left: 100px;
     color: black;
-    overflow: hidden;
-}
-
-.tracker-table button {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 50px 0;
-    padding: 10px 15px;
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    width: 20%;
-    border-radius: 5px;
-    border: 0;
     overflow: hidden;
 }
 

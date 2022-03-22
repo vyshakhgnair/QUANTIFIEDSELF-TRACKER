@@ -26,6 +26,7 @@
                     {% set count=namespace(value=1) %} {% for row in rows %}
                     <td>{{row['name']}}</td>
                     <td>{{row['description']}}</td>
+                    <td><a href="/addlog/{{row['tracker_id']}}" style="font-size:30px;">+</a></td>
                     <td>
 
                     </td>

@@ -32,9 +32,8 @@ def signup():
 
 
             missing = User.query.filter_by(user_name=usernm).first()
-            print(missing)
+
             if missing is None:
-                print('Please enter')
                 data = User(user_name=usernm,password=pass_key, email=email_id)
                 db.session.add(data)
                 db.session.commit()

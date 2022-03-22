@@ -28,8 +28,8 @@ class log(db.Model):
     timestamp = db.Column(db.String(150),nullable=False,unique=False)
     value = db.Column(db.Integer , primary_key=False,unique =False)
     notes = db.Column(db.String(150) , primary_key=False,unique =False)
-    tracker_id =db.column(db.Integer,db.ForeignKey('tracker_id'),nullable=False)
-    user_id = db.column(db.Integer,db.ForeignKey('user_id'),nullable=False)
+    tracker_id =db.Column(db.Integer, db.ForeignKey("tracker_id"),nullable=False)
+    user_id = db.Column(db.Integer,db.ForeignKey('user_id'),nullable=False)
 
     
 class tracker(db.Model):
@@ -38,5 +38,5 @@ class tracker(db.Model):
     description = db.Column(db.String(150) , primary_key=False,unique =False)
     tracker_type = db.Column(db.String(150) , primary_key=False,unique =False,nullable=False)
     settings = db.Column(db.String(150) , primary_key=False,unique =False)
-    user_id = db.column(db.Integer,db.ForeignKey('user_id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('user_id'))
     

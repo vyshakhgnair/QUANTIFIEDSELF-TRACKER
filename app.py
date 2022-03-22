@@ -1,6 +1,5 @@
-from flask import Flask, render_template, url_for, redirect, request
-from model import app, User, db
-
+from flask import Flask, render_template, url_for, redirect,request
+from model import  app,User,db
 
 all=User.query.all()
 @app.route('/')

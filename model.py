@@ -1,6 +1,8 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+
+
 app = Flask(__name__)
 app.debug = True
 
@@ -14,7 +16,7 @@ db = SQLAlchemy(app)
 # Models
 
 
-class user(db.Model):
+class User(db.Model):
     user_id = db.Column(db.Integer, primary_key=True,
                         autoincrement=True, nullable=False)
     user_name = db.Column(db.String(150), nullable=False, unique=True)
@@ -26,15 +28,15 @@ class log(db.Model):
     timestamp = db.Column(db.String(150),nullable=False,unique=False)
     value = db.Column(db.Integer , primary_key=False,unique =False)
     notes = db.Column(db.String(150) , primary_key=False,unique =False)
-    tracker_id =db.column(db.Integer,foreign_keys=True)
-    user_id = db.column(db.Integer,foreign_keys=True)
-    added_date_time = db.Column(db.String(150) , primary_key=False, unique =False)
+    tracker_id =db.column(db.Integer,db.ForeignKey('tracker_id'),nullable=False)
+    user_id = db.column(db.Integer,db.ForeignKey('user_id'),nullable=False)
+
     
-class tracker(db.Model)
-    tracker_id = db.Column(db.Integer , primary_key=True,unique =True)
+class tracker(db.Model):
+    tracker_id = db.Column(db.Integer , primary_key=True,unique =True,autoincrement=True, nullable=False)
     name = db.Column(db.String(150) , primary_key=False,unique =False)
     description = db.Column(db.String(150) , primary_key=False,unique =False)
-    tracker_type = db.Column(db.String(150) , primary_key=False,unique =False)
+    tracker_type = db.Column(db.String(150) , primary_key=False,unique =False,nullable=False)
     settings = db.Column(db.String(150) , primary_key=False,unique =False)
-    user_id = db.column(db.Integer,foreign_keys=True)
+    user_id = db.column(db.Integer,db.ForeignKey('user_id'))
     

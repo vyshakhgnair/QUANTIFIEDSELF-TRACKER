@@ -7,7 +7,37 @@
 </head>
 
 <body>
-    <button type="submit"><a href="{{url_for('addtracker')}}">Add Tracker</a></button>
+
+    <h1>Hello,{{usernm}}</h1>
+
+
+    <div class="tracker-table" style="padding-top: 30px">
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Tracker</th>
+                    <th scope="col">Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% set count=namespace(value=1) %} {% for row in rows %}
+                    <td>{{row['name']}}</td>
+                    <td>{{row['description']}}</td>
+                    <td>
+
+                    </td>
+                </tr>
+                {% set count.value=count.value+1 %} {% endfor %}
+            </tbody>
+        </table>
+        <div class="btn-grp">
+            <button class="btn1" type="submit"><a href="{{url_for('addtracker')}}">Add Tracker</a></button>
+            <button class="btn2" type="submit"><a href="{{url_for('index')}}">Logout</a></button>
+        </div>
+    </div>
 </body>
 
 </html>

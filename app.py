@@ -2,8 +2,8 @@ from flask import Flask, render_template, url_for, redirect, request, flash
 from model import *
 
 
-usernam=None
-user_idd=0
+usernam = None
+user_idd = 0
 all = User.query.all()
 
 
@@ -39,7 +39,7 @@ def signup():
                         password=pass_key, email=email_id)
             db.session.add(data)
             db.session.commit()
-            user_idd=user_id
+            user_idd = user_id
             return redirect(url_for('index'))
     else:
         if request.form:
@@ -54,7 +54,7 @@ def signup():
                             password=pass_key, email=email_id)
                 db.session.add(data)
                 db.session.commit()
-                user_idd=user_id
+                user_idd = user_id
                 return redirect(url_for('index'))
 
     return render_template('signup.html')
@@ -62,7 +62,19 @@ def signup():
 
 @app.route('/dashboard')
 def dash():
-    return render_template('dashboard.html')
+    user_obj = User.query.filter_by(user_name=usernam).first()
+    if user_obj is not None:
+        user_idd=user_obj.user_id
+    rid=[]    
+    '''rows=tracker.query.filter_by(user_id=user_idd).first()
+    if rows is not None:
+        trackernm=rows.name
+        trackerdesc=rows.description'''
+    rows=tracker.query.filter_by(user_id=user_idd).all()  
+    print(rows)  
+    return render_template('dashboard.html',rows=rows,usernm=usernam)
+
+
 
 
 @app.route('/addtrack', methods=['GET', 'POST'])
@@ -82,7 +94,7 @@ def addtracker():
         db.session.add(data)
         db.session.commit()
         return redirect(url_for('dash'))
-    return render_template('add_tracker.html')   
+    return render_template('add_tracker.html')      
 
 if __name__ == '__main__':
     app.run(debug=True)

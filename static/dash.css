@@ -9,54 +9,71 @@ body {
     background-size: cover;
 }
 
-.dash-page {
+h1 {
     width: 50px;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 10px;
     position: absolute;
     color: #fff;
+    font-family: lucida;
+    font-size: 60px;
 }
 
-.dash-page h1 {
-    font-size: 30px;
-    width: 500px;
-    top: -50px;
-    right: 375px;
-    font-style: bold;
-    position: absolute;
-    font-family: lucida-bold;
+.tracker-table table th {
+    font-size: 40px;
+    margin: 50px 0;
+    padding-top: 200px;
+    padding-right: 250px;
+    padding-left: 290px;
+    color: black;
+    overflow: hidden;
 }
 
-.dash-page button {
+.tracker-table table td {
+    font-size: 25px;
+    position: relative;
+    padding-top: 50px;
+    padding-left: 290px;
+    color: black;
+    overflow: hidden;
+}
+
+.tracker-table button {
     font-size: 18px;
-    top: -50px;
-    left: 750px;
     font-weight: bold;
+    margin: 50px 0;
     padding: 10px 15px;
-    width: 100px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 20%;
     border-radius: 5px;
     border: 0;
-    position: absolute;
+    overflow: hidden;
 }
 
-.dash-table {
-    width: 350px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.tracker-table .btn-grp .btn1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 50px 0;
+    padding: 10px 15px;
     position: absolute;
-    color: #fff;
+    top: 70%;
+    left: 30%;
+    width: 20%;
+    border-radius: 5px;
+    border: 0;
+    overflow: hidden;
 }
 
-.dash-table button {
-    font-size: 30px;
+.tracker-table .btn-grp .btn2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 50px 10px;
+    padding: 10px 15px;
+    width: 10%;
+    top: -30px;
+    left: 1450px;
     position: absolute;
-    width: 500px;
-    height: 50px;
-    top: 100px;
-    left: 50%;
-    color: #fff;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 0;
 }

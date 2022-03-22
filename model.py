@@ -28,7 +28,6 @@ class log(db.Model):
     notes = db.Column(db.String(150) , primary_key=False,unique =False)
     tracker_id =db.column(db.Integer,foreign_keys=True)
     user_id = db.column(db.Integer,foreign_keys=True)
-    added_date_time = db.Column(db.String(150) , primary_key=False, unique =False)
     
 class tracker(db.Model)
     tracker_id = db.Column(db.Integer , primary_key=True,unique =True)

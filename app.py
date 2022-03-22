@@ -1,10 +1,20 @@
-from flask import Flask, render_template, url_for, redirect,request
-from model import  app,User,db
+from flask import Flask, render_template, url_for, redirect,request,flash
+from model import  *
 
 all=User.query.all()
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def index():
-    return render_template('login.html')
+    error=None
+    if request.form:
+        
+        usernam=request.form['user']
+        pass_word=request.form.get('password')
+        x=User.query.filter_by(user_name=usernam,password=pass_word).first()
+        if(x is None):
+            error="Wrong credentials"
+        else :      
+            return redirect(url_for('dash'))
+    return render_template('login.html',error=error)
 
 
 @app.route('/signup',methods=['GET','POST'])

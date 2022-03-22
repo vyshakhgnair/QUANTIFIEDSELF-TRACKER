@@ -3,56 +3,56 @@
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>DashBoard</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="static/dash.css">
-    <lik href = "style.css" rel ="stylesheet"></lik> 
+    <lik href="style.css" rel="stylesheet"></lik>
 </head>
 
 <body>
-        <div class=" row no-gutters">
-            <div class = "col">
-                <div class="leftside">
-             
-            
-                    <div class="dash-page">
-                        <h1>Hello,Vyshakh</h1>
+    <div class=" row no-gutters">
+        <div class="col">
+            <div class="leftside">
 
-                        <button type="submit"><a href="{{url_for('index')}}">Logout</a></button>
 
-                    </div>
-                    <div class="dash-table">
-                        <table>
+                <div class="dash-page">
+                    <h1>Hello,Vyshakh</h1>
 
-                            <!-- Colgroup -->
-                            <colgroup>
-                                <col class="vzebra-odd">
-                                <col class="vzebra-even">
-                                <col class="vzebra-odd">
-                                <col class="vzebra-even">
-                            </colgroup>
+                    <button type="submit"><a href="{{url_for('index')}}">Logout</a></button>
 
-                            <!-- Table header -->
-                            <thead>
-                                <tr>
-                                    <th scope="col" id="vzebra-comedy">Employee</th>
-                                    ...
-                                </tr>
-                            </thead>
+                </div>
+                <div class="dash-table">
+                    <table>
 
-                            ...
-                        </table>
-                    </div>
-                    <button type="submit"><a href="{{url_for('index')}}">Add Tracker</a></button>
+                        <!-- Colgroup -->
+                        <colgroup>
+                            <col class="vzebra-odd">
+                            <col class="vzebra-even">
+                            <col class="vzebra-odd">
+                            <col class="vzebra-even">
+                        </colgroup>
+
+                        <!-- Table header -->
+                        <thead>
+                            <tr>
+                                <th scope="col" id="vzebra-comedy">Employee</th>
+                                ...
+                            </tr>
+                        </thead>
+
+                        ...
+                    </table>
+                </div>
+                <button type="submit"><a href="{{url_for('index')}}">Add Tracker</a></button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col">
+                <div class="rightside">
+                    <! evide baaki nammade display of trackers ayirikum>
+
                 </div>
             </div>
-            <div class = "col">
-                <div class = "col">
-                    <div class = "rightside">
-                       <! evide baaki nammade display of trackers ayirikum>
-
-                    </div>
-                </div>
-            </div>
+        </div>
 
 </body>
 

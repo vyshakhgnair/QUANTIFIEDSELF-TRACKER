@@ -21,7 +21,7 @@ class user(db.Model):
     email = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(150), nullable=False)
 
-class log(db.Model)
+class log(db.Model):
     log_id = db.Column(db.Integer, primary_key=True,autoincrement=True,nullable=False)
     timestamp = db.Column(db.String(150),nullable=False,unique=False)
     value = db.Column(db.Integer , primary_key=False,unique =False)

@@ -1,13 +1,12 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
 app = Flask(__name__)
 app.debug = True
  
 # adding configuration for using a sqlite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
- 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 # Creating an SQLAlchemy instance
 db = SQLAlchemy(app)
  

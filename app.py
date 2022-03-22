@@ -57,6 +57,8 @@ def signup():
 def dash():
     return render_template('dashboard.html')
 
-
+@app.route('/addtrack',methods=['GET','POST'])
+def addtracker():
+    return render_template('add_tracker.html')
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Tracker</title>
+    <link rel="stylesheet" type="text/css" href="static/signup.css">
+</head>
+
+<body>
+    <div class="signup-form">
+        <h1>Add Tracker</h1>
+        <form action="/addtrack" method="post" id="tracker_form">
+            <p>Name</p>
+            <input type="text" name="tracknm" placeholder="Tracker Name" required>
+            <p>Description</p>
+            <input type="text" name="description" placeholder="Description">
+            <p>Tracker Type </p>
+            <input type="text" name="type" placeholder="Tracker Type" required>
+            <p>Settings</p>
+            <input type="text" name="setting" placeholder="Settings" required>
+            <button type="submit">Done</button>
+        </form>
+</body>
+
+</html>

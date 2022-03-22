@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Creating an SQLAlchemy instance
 db = SQLAlchemy(app)
-Base = descriptive_base()
+#Base = descriptive_base()
 
 # Models
 
@@ -26,8 +26,8 @@ class log(db.Model)
     timestamp = db.Column(db.String(150),nullable=False,unique=False)
     value = db.Column(db.Integer , primary_key=False,unique =False)
     notes = db.Column(db.String(150) , primary_key=False,unique =False)
-    tracker_id =
-    user_id = 
+    tracker_id =db.column(db.Integer,foreign_keys=True)
+    user_id = db.column(db.Integer,foreign_keys=True)
     added_date_time = db.Column(db.String(150) , primary_key=False, unique =False)
     
 class tracker(db.Model)
@@ -36,5 +36,5 @@ class tracker(db.Model)
     description = db.Column(db.String(150) , primary_key=False,unique =False)
     tracker_type = db.Column(db.String(150) , primary_key=False,unique =False)
     settings = db.Column(db.String(150) , primary_key=False,unique =False)
-    user_id = 
+    user_id = db.column(db.Integer,foreign_keys=True)
     

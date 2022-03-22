@@ -18,16 +18,15 @@ def signup():
 
 
         missing = User.query.filter_by(user_name=usernm).first()
-        print(missing)
+       
         if missing is None:
-            print('Please enter')
+            
             data = User(user_id=100, user_name=usernm,password=pass_key, email=email_id)
             db.session.add(data)
             db.session.commit()
             return redirect(url_for('index'))
     else:
         if request.form:
-            #user_id=user_id+1
             usernm = request.form['user']
             email_id = request.form['email']
             pass_key = request.form['password']

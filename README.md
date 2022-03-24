@@ -2,13 +2,13 @@ Requirments to run this project
 ======================================
 
 1. Python 3.8.10- https://www.python.org/downloads/
-2. Flask - Flask 2.0.3 - pip install flask
-           Werkzeug 2.0.3
+2. Flask - Flask 2.0.3 - `pip install flask
+           Werkzeug 2.0.3`
 
 3.DB-browser-https://sqlitebrowser.org/
 
-4.SqlAlchemy-pip install flask-sqlalchemy
-5.Matplotlib-pip install matplotlib
+4.SqlAlchemy-`pip install flask-sqlalchemy`
+5.Matplotlib-`pip install matplotlib`
 
 
 Steps to run the project
